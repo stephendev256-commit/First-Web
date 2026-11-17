@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS | Future Starts Here</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b18;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(8,11,24,0.9);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #00e5ff;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background:
+      radial-gradient(circle at 50% 40%, #142c52 0%, #080b18 65%);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 75px);
+    margin-bottom: 20px;
+    animation: appear 1.2s ease;
+}
+
+.hero h1 span {
+    color: #00e5ff;
+    text-shadow: 0 0 25px #00e5ff;
+}
+
+.hero p {
+    color: #aab4cc;
+    font-size: 18px;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 35px;
+    background: #00e5ff;
+    border: none;
+    border-radius: 30px;
+    color: #080b18;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00e5ff;
+}
+
+/* Cards */
+.features {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #111a30;
+    padding: 35px 25px;
+    border: 1px solid #1c4260;
+    border-radius: 18px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow: 0 0 25px #00e5ff33;
+}
+
+.card h3 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aab4cc;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #77839c;
+    border-top: 1px solid #1c263c;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">NEXUS.</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <h1>WELCOME TO <span>THE FUTURE</span></h1>
+
+    <p>
+        Explore technology, creativity and innovation.
+        Your journey into the digital world starts right here.
+    </p>
+
+    <button class="btn" onclick="explore()">
+        Explore Now →
+    </button>
+</section>
+
+<section class="features" id="features">
+    <h2>What Makes Us Different?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>⚡ Speed</h3>
+            <p>Experience a smooth and fast digital environment.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Innovation</h3>
+            <p>Discover modern ideas and futuristic technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Creativity</h3>
+            <p>A beautiful interface designed for a modern generation.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="features" id="about">
+    <h2>Think Beyond Limits.</h2>
+    <p style="color:#aab4cc;">
+        Technology is not just the future. It is what we create today.
+    </p>
+</section>
+
+<footer>
+    © 2026 NEXUS. All Rights Reserved.
+</footer>
+
+<script>
+function explore() {
+    alert("Welcome to NEXUS! 🚀");
+    document.getElementById("features").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
